@@ -142,114 +142,46 @@ li{
     height: 3px;
     margin: 15% 0;
 }
-/* end Navbar section */
-#line1{
-    font-size: 20px;
-    font-style: italic;
-    border: 1px solid rgb(240, 219, 248);
-    border-radius: 10px;
-    margin: auto 8%;
-    padding: 2% 0.5%;
-    /* height: 6vh; */
-    justify-content: center;
-    color: rgb(225, 219, 212);
-    font-weight: 600;
-    transition: all ease 0.6s;
+.thermo{
+    background-image: linear-gradient(to left, rgb(218, 183, 149) 20% 50%, rgb(243, 239, 236) 20% 100%);
+    padding: 3% 2%;text-align: center;
+    color: #f9e907;
+    /* color: rgb(238, 109, 35); */
+    font-size: 48px;
+    margin: 1% 2% 1% 2%;
 }
-span>h1{
-    margin: auto auto 2% 8%;
-}
-.main{
-    background-image: linear-gradient(to left, rgb(218, 183, 149) 0%, rgb(142, 119, 97) 100%);
-    height: 85vh;
-    display: flex;
-    margin: auto 2%;
-}
-.row1{
-    flex: 50%;
-    background-image: linear-gradient(to bottom, rgb(255, 255, 252) 11%,rgb(191, 203, 221) 25%,rgb(150, 170, 191) 30%,rgb(109, 124, 140) 38%,rgb(110, 129, 154) 45%,rgb(94, 113, 138) 50%,rgb(85, 106, 128) 53%, rgb(66, 82, 99) 80%);
-}
-.img>img{
-    height: auto;
-    width: 42%;
-    margin: 1% 30%;
-    /* text-align: center; */
-}
-.caption{
-    font-size: 30px;
-    font-weight: 900;
-    position: relative;
-    width: 100px;
-    padding: 1% 2%;
-    border: 1px solid #d0d0d0;
-    border-radius: 5px;
-    bottom: 60px;
-    font-style: italic;
-    left: 40%;
-    color: #fffffc;
-}
-.row2{
-    flex: 50%;
-    background-color: rgb(198, 165, 135);
-}
-.typeElem{
-    margin: 30% 0%;
-    width: 100%;
-}
-.Works{
-    margin: 1% 1%;
-    background-color: rgba(250, 246, 246, 0.953);
-    box-shadow: -1px -1px blue, 2px 2px red,0 2px 6px rgb(61, 61, 61);
-    padding: 1% 1% 3% 1%;
-}
-.project_heading{
-    /* background-image: linear-gradient(to left, rgb(62, 62, 59) 50%, rgb(78, 67, 55) 60%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
+.head>h1{
     text-align: center;
-    color: cornflowerblue;
-    font-size: 35px;
-    padding: 0 0 1% 0;
-    font-style: italic;
+    font-size: 58px;
+    text-transform: capitalize;
+    /* margin: 2% 2% 0.5% 2%; */
 }
-.projects{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    border: 1px solid rgba(255, 255, 255, 0.695);
-    border-radius: 1px;
-    padding: 2% 0;
-    box-shadow: -1px -1px blue, 2px 2px red,0 2px 6px rgb(61, 61, 61);
-}
-.project{
-    margin: 1% 3%;
-    border: 1px solid #d0d0d05f;
-    box-shadow: -1px -1px blue, 2px 2px red,0 2px 6px rgb(61, 61, 61);
-    flex: 33%;
-    padding: 1% 2%;
-    text-align: center;
-    cursor: pointer;
-    transition: all ease 0.3s;
-}
-.project:hover{
-    border: 1px solid #d0d0d05f;
-    background-color: #393838;
-    color: #f1f2f6;
-    border-radius: 3px;
-    transition: all ease 0.3s;
-}
-.project>a{
-    color: rgba(86, 58, 7, 0.756);
-    transition: all ease-in 0.5s
-}
-.project>a:visited{
-    color: rgba(255, 166, 0, 0.688);
-    transition: all ease-in 0.5s
-}
-.project>a:hover{
-    color: #e6e9ef;
-    transition: all ease-out 0.7s;
+.thermoChecker{
+    display: grid;
+    place-content: center;
+    background-image: linear-gradient(to left, rgb(218, 183, 149) 20% 50%, rgb(243, 239, 236) 20% 100%);
+    font-size: 48px;
+    margin: 1% 18% 1% 18%;
+    padding: 3% 1%;
 }
 
+input[type=number], select{
+    font-size: 23px;
+    padding: 4% 3%;
+    width: 30%;
+    margin: 2% 0%;
+    color: #9b9898;
+    background-color: rgba(227, 222, 216, 0.685);
+    border: 2px solid rgba(250, 235, 215, 0.484);
+    border-radius: 10px;
+}
+input[type=submit]{
+    margin: 2% 0%;
+    color: #9b9898;
+    background-color: rgba(227, 222, 216, 0.685);
+    border: 2px solid rgba(9, 9, 9, 0.44);
+    border-radius: 10px;
+    width: 20%;
+    padding: 3% 2%;
+    font-size: 23px;
+}

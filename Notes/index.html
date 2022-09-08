@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+
+<body>
+  <!-- Startb of navigation bar -->
+  <navbar>
+    <div class="navMenu">
+      <h1>MJ</h1>
+      <ul id="menuItems">
+        <li class="listItems"><a href="#home">Home</a></li>
+        <li class="listItems"><a href="">Contact</a></li>
+        <li class="listItems" id="drop"><a href="">About Us</a><br>
+          <ul id="dropDown">
+            <li>About Me</li>
+            <li>About Us</li>
+          </ul>
+        </li>
+        <li class="listItems"><a href="">Services</a></li>
+        <li class="listItems"><a href="">Portfolio</a></li>
+      </ul>
+      <div class="menuIcon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </div>
+  </navbar>
+  <!-- End of navigation bar -->
+  <!-- main section starts -->
+  <section class="main" id="home">
+    <div class="row1">
+      <div class="typeElem">
+        <span>
+          <h1>Mrutunjay</h1>
+        </span>
+        <span id="line1" onloadstart="typeWriter()"></span>
+      </div>
+      <div class="img">
+        <img src="../Img/1132875.jpg" alt="Son Goku" srcset="">
+        <span class="caption">Son-Goku</span>
+      </div>
+    </div>
+    <div class="row2">
+      <div id="add">
+        <div id="plusIc"><i class="uil uil-plus"></i></div>
+        <div class="add">AddNote</div>
+      </div>
+      <div class="todo-note" id="note">
+        <div class="heading">
+          <h1>Add Note</h1><span class="cancel" id="close"><i class="uil uil-times"></i></span>
+        </div>
+        <br />
+        <div class="container1">
+          <div class="maintdw">
+            <label for="title">Title: <input type="text" name="text" id="title" value="" maxlength="60"></label><br>
+            <label for="textArea">Description: <textarea name="desc" id="textArea" cols="30" rows="5"
+                maxlength="260"></textarea></label>
+          </div>
+          <div class="mainsb">
+            <button id="save" type="submit">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <span class="mainHeadNote">Note List</span>
+  <section class="note-list">
+  </section>
+  <script src="./index.js"></script>
+</body>
+</html>
