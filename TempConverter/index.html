@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temprature Convertor</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1f9b3a1f70.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Startb of navigation bar -->
+  <navbar>
+    <div class="navMenu">
+      <h1>MJ</h1>
+      <ul id="menuItems">
+        <li class="listItems"><a href="#home">Home</a></li>
+        <li class="listItems"><a href="">Contact</a></li>
+        <li class="listItems" id="drop"><a href="">About Us</a><br>
+          <ul id="dropDown">
+            <li>About Me</li>
+            <li>About Us</li>
+          </ul>
+        </li>
+        <li class="listItems"><a href="">Services</a></li>
+        <li class="listItems"><a href="">Portfolio</a></li>
+      </ul>
+      <div class="menuIcon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </div>
+  </navbar>
+  <!-- End of navigation bar -->
+  <section class="thermo">
+    <div>I am a Thermome<span id="temp" class="fa"></span>er</div>
+    <div class="head"><h1>Check out the Temprature</h1></div>
+  </section>
+  <section class="thermoChecker">
+    <div class="Checker">
+      <form action="" onsubmit="calculateTemp(); return false" id="tempCalc">
+        <label for="temp1"> Enter the Temprature You want to Change</label><br />
+        <input type="number" name="temp1" id="temp1">
+
+        <select title="temp1" name="temp_diff" id="temp_diff">
+          <option value="cel">Celcius</option>
+          <option value="fah">Fahrenheit</option>
+        </select><br  />
+
+        <input type="submit" name="temp1"><br  />
+        <span id="resultContainer"></span>
+      </form>
+    </div>
+  </section>
+  <script>
+    // dropdown on hover start
+    let Menu1 = document.querySelector("#drop");
+    let menu = document.querySelector('#dropDown');
+    Menu1.addEventListener('mouseenter', () => {
+      console.log(menu.style.display = "block");
+    })
+    Menu1.addEventListener('mouseleave', () => {
+      console.log(menu.style.display = "none");
+    })
+    // dropdown on hover end
+const tempLoad = () =>{
+    let temp = document.getElementById("temp");
+    temp.innerHTML = "&#xf2cb";
+    temp.style.color = "white";
+    setTimeout(() => {
+        temp.innerHTML = "&#xf2ca";
+        temp.style.color = "lightGreen";
+    }, 1000);
+    setTimeout(() => {
+        temp.innerHTML = "&#xf2c9";
+        temp.style.color = "rgb(216, 202, 8)";
+    }, 2000);
+    setTimeout(() => {
+        temp.innerHTML = "&#xf2c8";
+        temp.style.color = "orange";
+    }, 3000);
+    setTimeout(() => {
+        temp.innerHTML = "&#xf2c7";
+        temp.style.color = "rgb(238, 109, 35)";
+    }, 4000);
+}
+setInterval(tempLoad, 5000);
+tempLoad();
+
+
+const calculateTemp = () =>{
+
+  let tempNum = document.getElementById("temp1").value;
+  console.log(tempNum);
+  // let selectMode = document.getElementById("temp_diff").value;
+  //or//in Case only for slect tag
+  let selectMode = document.getElementById("temp_diff");
+  let valueSet = temp_diff.options[selectMode.selectedIndex].value;
+  console.log(selectMode);
+  const celToFah = (cel)=>{
+    let fah = ((cel*9/5)+32);
+    return fah;
+  }
+  const fahToCel = (fah)=>{
+    let cel = ((fah-32)*5/9);
+    return cel;
+  }
+  let result;
+  if(valueSet === "cel"){
+    result = celToFah(tempNum);
+    document.getElementById("resultContainer").innerHTML = `= ${result}<sup>&#9675</sup> Fahrenheit`;
+  }else{
+    result = fahToCel(tempNum);
+    document.getElementById("resultContainer").innerHTML = `= ${result}<sup>&#9675</sup> Celcius`;
+  }
+}
+  </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DynamicCounterIncrement Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1f9b3a1f70.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Startb of navigation bar -->
+  <navbar>
+    <div class="navMenu">
+      <h1>MJ</h1>
+      <ul id="menuItems">
+        <li class="listItems"><a href="#home">Home</a></li>
+        <li class="listItems"><a href="">Contact</a></li>
+        <li class="listItems" id="drop"><a href="">About Us</a><br>
+          <ul id="dropDown">
+            <li>About Me</li>
+            <li>About Us</li>
+          </ul>
+        </li>
+        <li class="listItems"><a href="">Services</a></li>
+        <li class="listItems"><a href="">Portfolio</a></li>
+      </ul>
+      <div class="menuIcon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </div>
+  </navbar>
+  <!-- End of navigation bar -->
+  <section class="incrementCounter">
+    <div class="cont">
+        <div>
+            <i class="fa-solid fa-mug-hot"></i>
+            <div class="Counter" data-target="4000"></div>
+            <p>Projects Completed</p>
+        </div>
+        <div>
+            <i class="fa-solid fa-mug-hot"></i>
+            <div class="Counter" data-target="15000"></div>
+            <p>Our Happy Clients</p>
+        </div>
+        <div>
+            <i class="fa-solid fa-mug-hot"></i>
+            <div class="Counter" data-target="4000"></div>
+            <p>Projects OnGoing</p>
+        </div>
+    </div>
+  </section>
+<script>
+// dropdown on hover start
+    let Menu1 = document.querySelector("#drop");
+    let menu = document.querySelector('#dropDown');
+    Menu1.addEventListener('mouseenter', () => {
+      console.log(menu.style.display = "block");
+    })
+    Menu1.addEventListener('mouseleave', () => {
+      console.log(menu.style.display = "none");
+    })
+// dropdown on hover end
+let Counters = document.querySelectorAll(".Counter");
+Counters.forEach(element => {
+    element.innerHTML = "0";
+    // console.log(element);
+    let targetData = Number(element.getAttribute("data-target"));
+    let DataIncrementValue = targetData/100;
+    const updateVal = () =>{  
+    let StartNum = +element.innerHTML;
+        if(StartNum<targetData){
+            element.innerHTML = `${StartNum + DataIncrementValue}`;
+            setTimeout(updateVal,10)
+        }else{
+            element.innerHTML = targetData;
+        }
+    }
+    updateVal();
+});
+</script>
+</body>
+</html>
