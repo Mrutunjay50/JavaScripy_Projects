@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style_home.css">
+</head>
+
+<body>
+  <!-- Startb of navigation bar -->
+  <navbar>
+    <div class="navMenu">
+      <h1>MJ</h1>
+      <ul id="menuItems">
+        <li class="listItems"><a href="#home">Home</a></li>
+        <li class="listItems"><a href="">Contact</a></li>
+        <li class="listItems" id="drop"><a href="">About Us</a><br>
+          <ul id="dropDown">
+            <li>About Me</li>
+            <li>About Us</li>
+          </ul>
+        </li>
+        <li class="listItems"><a href="">Services</a></li>
+        <li class="listItems"><a href="">Portfolio</a></li>
+      </ul>
+      <div class="menuIcon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </div>
+  </navbar>
+  <!-- End of navigation bar -->
+  <!-- main section starts -->
+  <section class="main" id="home">
+    <div class="row1">
+      <div class="img">
+        <img src="Img\1132875.jpg" alt="Son Goku" srcset="">
+        <span class="caption">Son Goku</span>
+      </div>
+    </div>
+    <div class="row2">
+      <div class="typeElem">
+        <span>
+          <h1>Mrutunjay</h1>
+        </span>
+        <div id="line1" onloadstart="typeWriter()"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="Works">
+    <h2 class="project_heading">Projects</h2>
+    <div class="projects">
+        <div class="project"><a href="./Notes/index.html" target="_blank">NoteTaking App</a></div>
+        <div class="project"><a href="./Speed TypeTesting/index.html" target="_blank">SpeedType Checker</a></div>
+        <div class="project">Parallax Scrolling Effect</div>
+        <div class="project"><a href="./TempConverter/index.html">Temprature Convertor</a></div>
+        <div class="project"><a href="./IncrementCounterWebPage/index.html">Increment Counter</a></div>
+        <div class="project">SpeedType Checker</div>
+        <div class="project">SpeedType Checker</div>
+        <div class="project">SpeedType Checker</div>
+        <div class="project">SpeedType Checker</div>
+        <div class="project">SpeedType Checker</div>
+        <div class="project">SpeedType Checker</div>
+    </div>
+  </section>
+
+  <script>
+
+    // dropdown on hover start
+    let Menu1 = document.querySelector("#drop");
+    console.log(Menu1);
+    let menu = document.querySelector('#dropDown');
+    console.log(menu);
+    Menu1.addEventListener('mouseenter', () => {
+      console.log(menu.style.display = "block");
+    })
+    Menu1.addEventListener('mouseleave', () => {
+      console.log(menu.style.display = "none");
+    })
+    // dropdown on hover end
+
+    //Typewriter
+    var i = 0;
+    var txt = `Hard Work is worthless for those that don't believe in themselves` + " -- NARUTO UZUMAKI";
+
+    function typeWriter() {
+      if (i < txt.length) {
+        document.getElementById("line1").innerHTML += txt.charAt(i);
+        i++;
+      } else {
+        document.getElementById("line1").innerHTML = "";
+        i = 0;
+      }
+    }
+    setInterval(typeWriter, 100);
+    
+
+    //typewriter ends
+
+  </script>
+
+  </body>
+  </html>

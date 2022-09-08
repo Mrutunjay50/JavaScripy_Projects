@@ -1,0 +1,255 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+/* custom CSS Variables */
+:root{
+    --bg-color: rgb(2, 1, 66);
+    --nav-bar-color: rgb(239, 208, 175);
+    --bg-black-200:white;
+    --bg-black-190: rgb(236, 233, 233);
+    --bg-black-150:#000000;
+    --bg-black-100:#dddddd;
+    --bg-black-50:#eff0f4;
+    --text-black-200:#000000;
+    --text-black-150:#555555;
+    --text-black-100:#666666;
+    --text-black-50:#8a8787;
+    --outer-shadow: 3px 3px 3px #d0d0d0, -3px -3px 3px #f8f8f8;
+    --outer-shadow-0: 0 0 0 #d0d0d0, 0 0 0 #f8f8f8;
+    --inner-shadow: inset 3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8;
+    --inner-shadow-0: inset 0 0 0 #d0d0d0, inset 0 0 0 #f8f8f8;
+    --bg-image: linear-gradient(to right,rgb(198, 165, 135) 20% 50%, white 20% 50%);
+    --text-image: linear-gradient(to left, rgb(14, 45, 75) 0%, rgb(28, 90, 151) 100%);
+}
+body{
+    overflow-x: hidden;
+    background-image: var(--bg-image);
+}
+a{
+    text-decoration: none;
+}
+/* body.dark{
+    --bg-color: yellowgreen;
+    --bg-black-200:black;
+    --bg-black-190: rgb(12, 12, 12);
+    --bg-black-150:#ffffff;
+    --bg-black-100:#353535;
+    --bg-black-50:#2b2c2f;
+    --text-black-200:#ffffff;
+    --text-black-150:#f0e8e8;
+    --text-black-100:#bbbbbb;
+    --text-black-50:#9e9a9a;
+    --outer-shadow: 3px 3px 3px #222327, -3px -3px 3px #363636;
+    --inner-shadow: inset 3px 3px 3px #222327, inset -3px -3px 3px #363636;
+    --outer-shadow-0: inset 0 0 0 #070707, inset 0 0 0 #363636;
+    --bg-image: linear-gradient(to left, #292828 0%, #3864f7 100%);
+} */
+
+li{
+    list-style-type: none;
+}
+
+/* Start navbar section */
+
+.navMenu{
+    background-color: var(--nav-bar-color);
+    /* background-color: ; */
+    /* color: var(--bg-black-100); */
+    display: flex;
+    font-size: 18px;
+    align-items: center;
+    position: static;
+    padding: 1%;
+    margin: 2% 2% 0.5% 2%;
+    z-index: 1;
+}
+
+/* to add a gradient overlay to text with CSS */
+
+.navMenu>h1, h1{
+    background-image:var(--text-image);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: #2b2c2f;
+    font-size: 42px;
+    margin: auto auto auto 4%;
+    cursor: pointer;
+}
+.navMenu>ul{
+    display: flex;
+    margin: auto auto auto 55%;
+    width: 100%;
+    z-index: 2;
+    color: rgb(245, 245, 242);
+}
+.navMenu>ul>li{
+    margin: auto 2%;
+    background-color: transparent;
+    transition: all ease 0.5s;
+    padding: 5px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    z-index: 3;
+}
+.navMenu>ul>li:hover{
+    padding: 5px;
+    border: 1px solid white;
+    border-radius: 2px;
+    background-color: rgb(250, 250, 250);
+    color: rgb(5, 5, 48);
+    transition: all ease 0.3s;
+    z-index: 6;
+}
+.navMenu>ul>li>ul{
+    padding: 0.5%;
+    display: none;
+    position: absolute;
+    top: 11%;
+    right: 20%;
+    color: var(--text-black-50);
+    background-color: var(--nav-bar-color);
+    z-index: -1;
+}
+.navMenu>ul>li>ul>li{
+    margin: 5% auto;
+    transition: all ease 0.3s;
+    padding: 5px;
+    border: 1px solid transparent;
+}
+.navMenu>ul>li>ul>li:hover{
+    padding: 5px;
+    border: 1px solid white;
+    border-radius: 2px;
+    background-color: rgb(250, 250, 250);
+    color: rgb(5, 5, 48);
+    transition: all ease 0.3s;
+}
+.menuIcon{
+    display: none;
+    position: absolute;
+    padding: 4px;
+    width: 2%;
+    height: auto;
+    border: 1px dotted whitesmoke;
+    border-radius: 5px;
+    left: 80vw;
+}
+.bar{
+    background-color: #dddddd8d;
+    width: 100%;
+    height: 3px;
+    margin: 15% 0;
+}
+/* end Navbar section */
+#line1{
+    font-size: 20px;
+    font-style: italic;
+    border: 1px solid rgb(240, 219, 248);
+    border-radius: 10px;
+    margin: auto 8%;
+    padding: 2% 0.5%;
+    /* height: 6vh; */
+    justify-content: center;
+    color: rgb(225, 219, 212);
+    font-weight: 600;
+    transition: all ease 0.6s;
+}
+span>h1{
+    margin: auto auto 2% 8%;
+}
+.main{
+    background-image: linear-gradient(to left, rgb(218, 183, 149) 0%, rgb(142, 119, 97) 100%);
+    height: 85vh;
+    display: flex;
+    margin: auto 2%;
+}
+.row1{
+    flex: 50%;
+    background-image: linear-gradient(to bottom, rgb(255, 255, 252) 11%,rgb(191, 203, 221) 25%,rgb(150, 170, 191) 30%,rgb(109, 124, 140) 38%,rgb(110, 129, 154) 45%,rgb(94, 113, 138) 50%,rgb(85, 106, 128) 53%, rgb(66, 82, 99) 80%);
+}
+.img>img{
+    height: auto;
+    width: 42%;
+    margin: 1% 30%;
+    /* text-align: center; */
+}
+.caption{
+    font-size: 30px;
+    font-weight: 900;
+    position: relative;
+    width: 100px;
+    padding: 1% 2%;
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+    bottom: 60px;
+    font-style: italic;
+    left: 40%;
+    color: #fffffc;
+}
+.row2{
+    flex: 50%;
+    background-color: rgb(198, 165, 135);
+}
+.typeElem{
+    margin: 30% 0%;
+    width: 100%;
+}
+.Works{
+    margin: 1% 1%;
+    background-color: rgba(250, 246, 246, 0.953);
+    box-shadow: -1px -1px blue, 2px 2px red,0 2px 6px rgb(61, 61, 61);
+    padding: 1% 1% 3% 1%;
+}
+.project_heading{
+    /* background-image: linear-gradient(to left, rgb(62, 62, 59) 50%, rgb(78, 67, 55) 60%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    text-align: center;
+    color: cornflowerblue;
+    font-size: 35px;
+    padding: 0 0 1% 0;
+    font-style: italic;
+}
+.projects{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.695);
+    border-radius: 1px;
+    padding: 2% 0;
+    box-shadow: -1px -1px blue, 2px 2px red,0 2px 6px rgb(61, 61, 61);
+}
+.project{
+    margin: 1% 3%;
+    border: 1px solid #d0d0d05f;
+    box-shadow: -1px -1px blue, 2px 2px red,0 2px 6px rgb(61, 61, 61);
+    flex: 33%;
+    padding: 1% 2%;
+    text-align: center;
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+.project:hover{
+    border: 1px solid #d0d0d05f;
+    background-color: #393838;
+    color: #f1f2f6;
+    border-radius: 3px;
+    transition: all ease 0.3s;
+}
+.project>a{
+    color: rgba(86, 58, 7, 0.756);
+    transition: all ease-in 0.5s
+}
+.project>a:visited{
+    color: rgba(255, 166, 0, 0.688);
+    transition: all ease-in 0.5s
+}
+.project>a:hover{
+    color: #e6e9ef;
+    transition: all ease-out 0.7s;
+}
+
